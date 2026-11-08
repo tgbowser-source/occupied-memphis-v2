@@ -1,7 +1,7 @@
 # Build Log — Occupied Memphis v2
 
 - **Batch 0** (fb2d699 docs + shell commit): Charter created as PROJECT-CHARTER.md. Standalone Vite + React + TS app shell. Working title screen with Start/Back smoke test navigation. Development version panel. Typecheck and production build pass. No console/import errors. No game scenes yet.
-- **Batches 1–12** (this tree): Playable Chapter 1 slice through Connor’s choice. Title painting, creation (James / Smith, both banks, six TBD stats, childhood tokens with no mapping), birthday narration, isometric yard, dialogue runner, ten faction gauges, both currencies, free save vs checkpoint-only, West farm, vehicle choice, HQ handlers, one work beat, raid narration into the same handler, Connor on both banks, then an out-of-story stop. Hard/Survival do not save on hide or manual save. No fast travel menu: the next documented beat is a button.
+- **Batches 1–12** (303df7b): Playable Chapter 1 slice through Connor’s choice. Title painting, creation (James / Smith, both banks, six TBD stats, childhood tokens with no mapping), birthday narration, isometric yard, dialogue runner, ten faction gauges, both currencies, free save vs checkpoint-only, West farm, vehicle choice, HQ handlers, one work beat, raid narration into the same handler, Connor on both banks, then an out-of-story stop. Hard/Survival do not save on hide or manual save. No fast travel menu: the next documented beat is a button.
 
 Gaps, not filled with fiction:
 
