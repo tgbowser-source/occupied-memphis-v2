@@ -1,14 +1,10 @@
 # Occupied Memphis
 
-Fresh build (v2). Painted isometric alt-history Memphis, 1950–55.
-
-Working title only. Design docs live in `docs/` and are read-only.
+Working title. Alternate-history Memphis, 1950–1955. This repository is the fresh build.
 
 ```bash
 npm install
 npm run dev
 ```
 
-The dev server listens on http://localhost:8080. Also: `npm run typecheck` and `npm run build`.
-
-No login, database, or builder secret is required to play.
+Design notes live in `docs/` and are not edited by the build. The charter is `PROJECT-CHARTER.md`. What is actually playable is in `BUILD-LOG.md`.

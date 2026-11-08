@@ -24,6 +24,11 @@ button {
   padding: 0.7rem 1.2rem;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 button:focus-visible {
   outline: 2px solid var(--paper);
   outline-offset: 3px;
@@ -62,12 +67,206 @@ h1 {
 
 .devpanel {
   position: fixed;
-  right: 0.8rem;
-  bottom: 0.8rem;
+  top: 7.5rem;
+  bottom: auto;
+  z-index: 5;
   font-size: 0.75rem;
   opacity: 0.75;
   border: 1px solid rgba(230, 220, 200, 0.35);
   padding: 0.5rem 0.7rem;
+  background: rgba(28, 23, 18, 0.8);
 }
 
 .devpanel p { margin: 0.15rem 0; }
+
+.title {
+  min-height: 100dvh;
+  position: relative;
+  display: grid;
+  align-items: end;
+}
+
+.title img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-copy {
+  position: relative;
+  z-index: 1;
+  padding: 2.5rem;
+  background: linear-gradient(to top, rgba(28, 23, 18, 0.92), rgba(28, 23, 18, 0));
+}
+
+.title-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.sheet {
+  min-height: 100dvh;
+  padding: 1.2rem 1rem 2rem;
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+  overflow: auto;
+}
+
+.sheet label, .sheet fieldset {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sheet input, .sheet select {
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 0;
+  padding: 0.55rem 0.7rem;
+  min-height: 44px;
+}
+
+.stage, .birthday {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+  background: #1c1712;
+}
+
+.birthday img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topbar {
+  position: absolute;
+  z-index: 3;
+  top: 0.6rem;
+  left: 0.6rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.world {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.hud, .savebar {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  padding: 0.45rem 0.6rem;
+  background: linear-gradient(to bottom, rgba(28, 23, 18, 0.88), rgba(28, 23, 18, 0));
+}
+
+.hud { top: 0; }
+.savebar { top: 4.2rem; background: none; }
+
+.hud p, .savebar p, .objectives p, .menu p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.menu {
+  position: absolute;
+  z-index: 4;
+  top: 5.5rem;
+  left: 0.6rem;
+  right: 0.6rem;
+  max-height: 60dvh;
+  overflow: auto;
+  background: rgba(28, 23, 18, 0.94);
+  border: 1px solid rgba(230, 220, 200, 0.35);
+  padding: 0.8rem;
+}
+
+.menu ul { margin: 0.4rem 0; padding-left: 1.1rem; }
+
+.dialogue {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  display: grid;
+  align-items: end;
+  background: rgba(12, 9, 7, 0.45);
+}
+
+.dialogue-card {
+  margin: 0.7rem;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+  max-height: 70dvh;
+  overflow: auto;
+}
+
+.dialogue-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  background: #c9a24a;
+}
+
+.dialogue-card .kicker { color: var(--rust); }
+.dialogue-card .src { font-size: 0.75rem; opacity: 0.7; }
+.dialogue-card button { background: var(--rust); color: var(--paper); }
+
+.objectives {
+  position: absolute;
+  z-index: 3;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  width: min(18rem, calc(100% - 11rem));
+  display: grid;
+  gap: 0.4rem;
+}
+
+.objectives p {
+  background: rgba(28, 23, 18, 0.88);
+  padding: 0.4rem 0.5rem;
+}
+
+.dpad {
+  position: absolute;
+  z-index: 3;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 52px 52px 52px;
+  grid-template-areas:
+    ". up ."
+    "left down right";
+  gap: 0.3rem;
+  touch-action: none;
+}
+
+.dpad button {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  background: rgba(230, 220, 200, 0.9);
+}
+
+.dpad .up { grid-area: up; }
+.dpad button:nth-child(2) { grid-area: left; }
+.dpad button:nth-child(3) { grid-area: down; }
+.dpad button:nth-child(4) { grid-area: right; }
+
