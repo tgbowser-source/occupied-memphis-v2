@@ -1,33 +1,38 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-function App() {
-  const [screen, setScreen] = useState<'home' | 'start'>('home')
+const VERSION = "0.1.0";
+
+type Screen = "home" | "started";
+
+export function App() {
+  const [screen, setScreen] = useState<Screen>("home");
 
   return (
-    <div className="app">
-      <header>
-        <h1>Occupied Memphis</h1>
-        <p className="subtitle">Working title — alt-history Memphis RPG, 1950–55</p>
-      </header>
-
-      {screen === 'home' && (
-        <main className="home">
-          <p>Batch 0 smoke test: app shell is running.</p>
-          <button onClick={() => setScreen('start')}>Start</button>
-          <div className="version-panel">
-            <small>dev build · v0.0.1 · Batch 0</small>
-          </div>
-        </main>
+    <main className="shell">
+      <p className="kicker">Working title</p>
+      <h1>Occupied Memphis</h1>
+      {screen === "home" ? (
+        <section className="panel" aria-label="Start">
+          <p>Navigation check. No story on this screen.</p>
+          <button type="button" onClick={() => setScreen("started")}>
+            Start
+          </button>
+        </section>
+      ) : (
+        <section className="panel" aria-label="Started">
+          <p>Start reached. Go back to the title shell.</p>
+          <button type="button" onClick={() => setScreen("home")}>
+            Back
+          </button>
+        </section>
       )}
-
-      {screen === 'start' && (
-        <main className="start">
-          <p>Navigation smoke test passed. This is the start screen stub.</p>
-          <button onClick={() => setScreen('home')}>Back</button>
-        </main>
+      {import.meta.env.DEV && (
+        <aside className="devpanel" aria-label="Development build">
+          <p>Development only</p>
+          <p>Occupied Memphis · v{VERSION} · batch 0</p>
+          <p>mode {import.meta.env.MODE}</p>
+        </aside>
       )}
-    </div>
-  )
+    </main>
+  );
 }
-
-export default App

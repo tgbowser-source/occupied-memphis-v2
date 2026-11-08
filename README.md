@@ -1,21 +1,14 @@
-# occupied-memphis-v2
+# Occupied Memphis
 
-Occupied Memphis, fresh build (v2): painted isometric alt-history Memphis RPG, 1950–55.
+Fresh build (v2). Painted isometric alt-history Memphis, 1950–55.
 
-Working title. Design source of truth lives in `docs/` (read-only for the build).
-
-## Development
+Working title only. Design docs live in `docs/` and are read-only.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Opens on http://localhost:8080
+The dev server listens on http://localhost:8080. Also: `npm run typecheck` and `npm run build`.
 
-## Build
-
-```bash
-npm run build
-npm run preview
-```
+No login, database, or builder secret is required to play.
