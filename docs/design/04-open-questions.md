@@ -10,10 +10,26 @@
 ## Story / design gaps
 6. **Scene 3A** is only a beat (“meet him at location”) — fold into 3B/3B2 or expand?
 7. **Disclose path (3B3)** ends at “go get the shipment” — next scenes unwritten (delivery, double-cross, first contact with Boss/Swims?)
-8. **Scene 3B / 3B2** raid outcomes and consequences not fully detailed beyond the setup.
-9. **Currency / economy** details (exchange rates, starting money, shops) still TBD beyond Marks/SDB notes names.
-10. **Reputation meters** exact values and thresholds still PROPOSED.
-11. **Weapons/vehicles** specific loadouts and availability by year still PROPOSED (research catalogs exist).
-12. **Childhood options** full list of 30+ not written; only default tokens listed.
-13. **Post-1955** who controls Memphis is parked.
-14. **Official title** still TBD.
+8. **Scene numbering** is messy (3B / 3B2 / 3B3); consider rename: 3-Covert-West, 3-Covert-East, 3-Disclose
+9. After covert raid + debrief: what unlocks? Reputation numbers? First real mission for handler?
+10. Can player refuse Connor’s job entirely after agency onboarding?
+11. Brother Joseph — role in Ch1? Absent so far
+12. Resistance commanders Boss / Swims — first on-screen when?
+
+## Continuity / clarity checks
+13. Connor’s exact allegiance and rank in resistance
+14. “German Imperialist” / “Japanese Imperialist” groups — player-facing names? When introduced?
+15. Spelling: **Yamashita** vs historical **Yamashita**? **Stauffenberg** vs **Stauffenberg** (intentional echo?)
+16. Rank romanization consistency (Keischichō, Shōshō, etc.)
+
+## Research TODOs (good for Research bot)
+- 1945–1950 Memphis + West Memphis street grid, Harahan Bridge approaches
+- Sterick Building & West Memphis City Hall period use / interiors vibe
+- Period-accurate venues for resistance hangouts (bars, supply stores)
+- Farm / dock / warehouse sites north river suitable for Ch1 set pieces
+- Gestapo / Tokko / Kempeitai rank & org accuracy for fiction pass
+
+
+## Research corrections applied
+- West Memphis City Hall: **1939**, not 1930 — update any lore/UI copy.
+- If story is post–Dec 1949, fiction needs a reason the Memphis & Arkansas Bridge is gone/unusable (or abandon “Harahan only”).
